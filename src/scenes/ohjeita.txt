@@ -1,0 +1,359 @@
+-------------------------------------------
+Varastonhallinta sovelluksen käytön ohjeita
+-------------------------------------------
+
+Tietoja:
+
+***Kaikki oikeudet pidätetään***.
+
+Software: Inventory Management
+Made by: JAMA Softwares
+Date: 20.8.2017 Tampere, Finland
+
+
+Sisältö:
+
+1. Sovelluksen käyttötarkoitus
+2. Käytön peruslogiikka
+3. Tuotteiden lisääminen
+4. Tuotteiden ottaminen
+5. Varaston tyhjentäminen
+6. Tuotteiden hakeminen
+7. Tallentaminen
+8. Varaston sisällön tarkastelu
+9. Lopettaminen
+10. Tuotteiden ja varastojen poistaminen
+11. Tuotteiden tai varastojen sisällön siirtäminen
+12. Pikanäppäimet
+14. Ulkoasu ja teemat
+
+
+
+1. Sovelluksen käyttötarkoitus:
+
+    Sovellus on tarkoitettu pienimuotoiseen varastonhallintaan. 
+    Tämä sovellus on suunnattu erityisesti isohkoille omavaraistalouksille tai 
+    yhteisöille. Se on kuitenkin sovellettavissa mihin tahansa vastaavaan pienten
+    yritysten tuotevarastojen ylläpitoon vain pienillä kosmeettisilla muutoksilla.
+
+    Varastonhallinta -sovellus on suunnitelttu työpöytäversioksi seuraaville 
+    käyttöjärjestelmille: Windows (.exe) tai Mac (.dmg). Tästä sovelluksesta on siis
+    saatavilla kaksi eri asennustiedostoversiota (8.2017).
+
+
+
+2. Käytön peruslogiikka
+
+    Kun sovellus käynnistettään työpöydältä, tai muusta sijainnistaan aukeaa
+    ikkuna, joka tulee huomioida painamalla Enter -painiketta. Tämän jälkeen aukeaa
+    varsinainen sovelluksen käyttöikkuna. Menubar -valikosta löytyvät sovelluksen 
+    kaikki käytettävissä olevat toiminnallisuudet.
+
+    Sovelluksen toiminnan perusperiaate:
+
+    Sovelluksen käynnistyessä luetaan tekstitiedosto (varastoraportti.txt) välimuistiin. 
+    Tämä mahdollistaa hakutoiminnallisuuden tehokkaan käytön ja muutoksien tekemisen.
+    Käyttäjän tallentaessa muutokset tai sulkiessa sovelluksen kirjoitetaan välimuisti 
+    tiedostoon. Tiedosto varastoraportti.txt siis ylikirjoitetaan. Toisin sanoen 
+    sovelluksen toiminta perustuu kyseisessä tiedostossa olevaan sisältöön ja sen 
+    muokkaamiseen. Jokaisella sovelluksen käyttökerralla luetaan varastoraportti.txt
+    ainoastaan kerran ja ylikirjoitetaan tallenna -komennolla tai käyttäjän sulkiessa
+    sovelluksen.
+
+
+
+3. Tuotteiden lisääminen
+
+    Tuotteita lisätään Muokkaa -valikon Lisää komennolla. Käyttäjältä kysytään
+    kysytään 4 eri syötettä. Syötteiden muoto on melko tarkkaan rajattu sovelluksen
+    virheettömän ja luotettavan toiminnan varmistamiseksi. Toisaalta tuotteita
+    ja kokonaisia varastoja voidaan tarvittaessa myös poistaa yksittäisesti, 
+    mutta tästä huolimatta on järkevää minimoida esimerkiksi virheellisten tuote 
+    tai varastotunnusten lisääminen. Syötteiden oikeellisuus käydään läpi järjestyksessä 
+    ylimmästä alkaen. Seuraavissa kohdissa 2.1.1 - 2.1.4 on kuvailtu kunkin kohdan 
+    sallittu sisältö:
+
+    3.1 Varastotunnus
+
+        Varastotunnus on oltava muotoa kaksi isoa kirjainta jota seuraa 1-2
+        numeroinen luku. Virheellisestä syötteestä ilmoitetaan käyttäjälle
+        ilmoitusteksti-ikkunassa, ikkunan alareunassa.
+
+    3.2 Tuotenimi
+
+        Tuotenimi voi sisältää vain isoja tai pieniä kirjaimia. Jos nimessä on
+        numeroita, ilmoitetaan virheellisestä syötteestä. Tuotenimi voi kuitenkin
+        olla kaksiosainen eli se voi sisältää välilyöntejä. Yhdyssana, joka sisältää
+        "-" -merkin ei valitettavasti ole sallittu.
+
+    3.3 Vuosi
+
+        Tähän kenttään voit antaa minkä tahansa luvun. Muista kuitenkin, että 
+        luku ei voi alkaa nollalla. Virheellisestä syötteestä ilmoitetaan. Ole 
+        kuitenkin varovainen ettet syötä vahingossa viisinumeroista lukua, sillä
+        siitä ei varoiteta.
+
+    3.4 Määrä
+
+        Määrän mittayksikkö on litra (l). Desimaaliluvut ovat sallittuja 
+        (esim. 0.2 tai 5.7). Kuten vuosi -kohdassa, myös tässä syötteen on oltava
+        luku (eli se ei voi olla 02.4 tai 07).
+
+    3.5 Lisää -napin toiminta
+
+        Lisää -napin painallus tarkistaa syötteet alkaen ylhäältä alas. Jos
+        kaikki syötteet ovat virheettömiä, lisätään tuote välimuistivarastoon.
+        Huom: vasta tallenna -toiminto kirjataa lisäyksen varastoraportti.txt 
+        tiedostoon.
+
+
+
+4 Tuotteiden ottaminen
+
+    Toiminnon valinta menubarista "Muokkaa -> Ota". Käyttäjältä kysytään kolmea
+    eri syötettä. Lisää -toiminnallisuudesta poiketen, varastotunnusta ei kysytä.
+    Kuitenkin syötteiden sallittu muoto on rajattu samoin periaattein. Syötteiden
+    oikeellisuus käydään läpi järjestyksessä ylhäältä alas. Seuraavissa kohdissa
+    2.2.1 - 2.2.3 on kuvailtu kunkin kohdan sallittu sisältö:
+
+    4.1 Tuotenimi
+
+        Syötä tähän tuote, jota haluat ottaa varastosta. Kirjainkoolla ei ole 
+        merkitystä, muutoin tuotenimen on vastattava tarkalleen oikeaa tuotetta.
+        Virheellisestä syötteestä ilmoitetaan.
+
+    4.2 Vuosi
+
+        Koska varastossa voi olla samannimistä tuotetta usealta eri vuodelta,
+        sinun tulee antaa myös vuosiluku. Vuosiluvun tulee olla kokonaisluku. Se
+        ei siis voi alkaa nollalla. Kuitenkin vuosi voi olla viisinumeroinen luku.
+        Jos tuotenimi on oikea, mutta vuosi väärä, ei tuotetta oteta ja ilmoitetaan 
+        tuotetta "Tuotenimi+vuosi" ei löytynyt.
+
+    4.3 Määrä
+
+        Määrän mittayksikkö on litra (l). Desimaaliluvut ovat sallittuja 
+        (esim. 0.2 tai 5.7). Kuten vuosi -kohdassa, myös tässä syötteen on oltava
+        luku (eli se ei voi olla 02.4 tai 07).
+
+    4.4 Ota -napin toiminta
+
+        Toimii samalla periaatteella kuin lisää -nappi. Otettaessa tuotetta 
+        vertaillaan tuotenimien vastaavuuksia jättäen kirjainkoon erot huomiotta, 
+        mutta vuosiluvun on täsmättävä. Onnistuneesta tuotteen otosta ilmoitetaan.
+
+
+
+5. Varaston tyhjentäminen
+
+    'Muokkaa -> Tyhjennä'.
+    Varaston tyhjennys perustuu tiedoston varastoraportti.txt ylikirjoittamiseen
+    tekstillä --- Varastotilanne ---. Sen sijaan välimuistivarastoa ei tyhjennetä,
+    joten käyttäjän on mahdollista palauttaa poistamansa tiedot 'Tallenna' komennolla
+    tai sulkemalla sovellus ikkunan sulje[X] -painikkeella. Jos siis haluat tyhjentää
+    varaston pysyvästi, tulee sinun lopettaa sovellus 'Varasto -> Lopeta' komennolla 
+    tallentamatta muutoksia.
+
+    Varasto tyhjennetään valikosta "Muokkaa -> Tyhjennä". Sen jälkeen käyttäjää
+    varoitetaan kaikkien tietojen lopullisesta menettämisestä. Kyllä tai Ei valinnan
+    jälkeen ohjelma palaa aloitusnäkymään ja ilmoittaa valintaan perustuen joko
+    varaston tyhjentymisestä tai tyhjennyksen peruuntumisesta. Muista, että jos 
+    jatkat sovelluksen käyttöä, sinun tulee sulkea sovellus ennen uusien tuotteiden
+    lisäämistä, koska välimuistia ei tyhjennetä.
+
+    HUOM: Koko varaston tyhjennys on tehty tarkoituksenmukaisesti hankalaksi,
+    jotta vältytään tahattomilta toimenpiteiltä. Jos satojen tuotteiden varasto
+    tyhjenee vahingossa, on niiden uudelleen lisääminen erittäin työläs toimenpide,
+    koska kaikki on lisättävä käsin manuaalisesti kirjoittamalla.
+
+
+
+6. Tuotteiden hakeminen
+
+    6.1 Haun periaate
+
+        Tuotteita voi hakea tuotteen nimen perusteella "Hae -> tuotenimellä" 
+        -valikosta. Hakukenttään kirjoitetaan haettavan tuotteen nimi. Käyttäjä 
+        voi hakea varaston sisältöä kirjoittamalla joko koko tuotenimen tai 
+        ainoastaan osan siitä. Esimerkiksi tuotetta 'Mansikka' voi hakea kirjoittamalla 
+        ainoastaan 'man' hakukenttään. Tällöin listataan kaikki tuotteet, jotka 
+        sisältävät sanan 'man'. Kirjainkoolla ei ole merkitystä.
+
+        Huom: Jos tuotehaku tehdään ilman syötettä, listataan koko varaston sisältö!
+
+    6.2 Hakuikkuna
+
+        Hakutoiminnallisuudessa on käytössä ponnahdusikkuna joka aukeaa 'Hae' 
+        -nappia painamalla (tai Enter -näppäintä hakuikkunan ollessa aktiivisena). 
+        Kuten pääikkunan hakutuloskentässä, myös tässä tuotteet on oletuksena 
+        järjesteltynä tuotenimen perusteella aakkosjärjestyksessä. Tuotetiedot 
+        on myös ryhmitelty selkeämmin, mikä helpottaa niiden tarkastelua.
+
+        Kun tuoteikkuna on avautunut, voi hakua jatkaa sulkematta sitä. Jokaisella
+        hakukerralla ikkunan sisältö päivittyy. Ikkunan voi sulkea vapaasti, mutta
+        se aukeaa automaattisesti jokaisella hakukerralla. Ikkuna sulkeutuu myös
+        siinä tapauksessa, jos sovellus suljetaan pääikkunasta.
+
+    6.3 Haettujen järjestäminen
+
+        Hakuikkunan tuotteet voi järjestää jokaisen sarakkeen perusteella joko nousevasti
+        tai laskevasti. Klikkaamalla haluamasi sarakkeen yläpalkkia, saat näkyviin
+        pienen nuolen, joka osoittaa ylös. Tuotteet on tällöin järjestetty nousevasti 
+        (A-Z). Uudelleen klikkaamalla tuotteet näytetään käänteisessä järjestyksessä 
+        laskevasti (Z-A).
+
+
+
+7. Tallentaminen
+
+    'Varasto -> Tallenna' tai (CTRL + T).
+    Muutokset voi tallentaa milloin tahansa menubar-valikosta "Varasto -> Tallenna"
+    -toiminnolla. Vaihtoehtoisesti näppäinyhdistelmä CTRL + T toimii myös riippumatta
+    siitä mikä valintaikkuna on käytössä. Sovelluksen käyttöä voi jatkaa normaalisti
+    tallennuksen jälkeen.
+
+    Muutokset tallennetaan automaattisesti, jos käyttäjä lopettaa sovelluksen
+    ikkunan yläkulmasta sulje (x) painikkeella. Jos et halua tallentaa muutoksia,
+    lopeta sovellus 'Varasto' -valikon 'lopeta' -toiminnolla tallentamatta. 
+
+
+
+8. Varaston sisällön tarkastelu
+
+    Varaston sisältöä voi tarkastella menubar -valikosta 'Varasto -> Raportti'
+    -toimintoa käyttäen. Aukevaan näkymään varaston sisältö listataan varastokohtaisesti 
+    järjestykseen varastotunnuksen mukaan.
+
+    Toinen tapa on suorittaa tuotehaku tyhjällä hakukentällä, jolloin listataan koko 
+    varaston sisältö. Tällöin käytössäsi on kattavat järjestely -toiminnot. Voit selata
+    tuotteita joko nimen, vuoden, määrän tai varastotunnuksen perusteella.
+
+
+
+9. Sovelluksen lopettaminen
+
+    Sovellusta sulkiessa ja lopetettaessa on hyvä tietää muutaman tärkeää seikkaa
+    tehtyen muutosten tallentumiseen liittyvistä seikoista.
+
+    9.1 Sovelluksen lopettaminen Varasto -valikosta
+
+        Kun käyttäjä sulkee sovelluksen 'Varasto -> Lopeta' toiminnolla, kysytään
+        tallennetaanko muutokset. Jos et halua tallentaa muutoksia, sinun tulee
+        lopettaa sovellus täältä vastaamalla kieltävästi.
+
+    9.2 Sovelluksen sulkeminen pääikkunasta
+
+        Jos suljet sovelluksen pääikkunasta käyttäen sulje[X] -painiketta ikkunan
+        yläkulmassa, tallentuu muutokset automaattisesti. Huom; jos käyttäjä on
+        tyhjentänyt varaston ja muutokset halutaan säilyttää, tallentaminen palauttaa
+        koko varaston sisällön, koska välimuisti kirjoitetaan tiedostolle (Tyhjennä
+        -toiminto ei tyhjennä välimuistia, jotta toiminto olisi peruttavissa).
+
+
+
+10. Tuotteiden ja varastojen poistaminen
+
+    'Muokkaa -> Poista'.
+    Tuotteiden ja varastojen poistamisen toiminnot on yhdistetty samalle näytölle.
+    Vasemmalla tuotteen ja oikealla varaston poistaminen. Molempien "Poista" -nappien 
+    painallus poistaa kyselemättä. Varmistu siitä, että olet varmasti poistamassa
+    oikean varaston tai tuotteen. Muista, että mikään toimintasi ei tallennu
+    automaattisesti. Tuotteet poistuvat vasta 'Tallenna' -komennolla tai kun 
+    sovellus lopetetaan 'Varasto' -valikosta.
+
+    10.1 Tuotteen poistaminen
+
+        Kuten muissa ikkunoissa, myös täällä syötteet tarkistetaan ylimmästä 
+        alkaen. Syötteissä on voimassa samat säännöt kuin muissakin toiminnoissa.
+        Tuotteen nimen kirjainkoolla ei ole merkitystä. Muutoin syötteiden on 
+        vastattava tismalleen poistettavaa tuotetta. Onnistuneesta tai epäonnistuneesta
+        toiminnasta ilmoitetaan pääikkunan ilmoitusalueella alareunassa.
+
+    10.2 Varaston poistaminen
+
+        Varaston poistaminen suoritetaan varastotunnuksen perusteella. Annetun
+        tunnuksen tulee vastata täsmälleen olemassa olevaa varastoa. Virheellisestä
+        syötteestä ja varaston poistamisen epäonnistumisesta tai onnistumisesta
+        ilmoitetaan pääikkunan ilmoitusalueella.
+
+    10.3 Toiminnan tallentuminen
+
+        Kuten kaikki muukin toiminta, myös poistaminen tallentuu vasta erikseen 
+        tallenna -komennolla tai kun sovellus suljetaan. Muista siis tallentaa
+        aika ajoin toimintasi.
+
+    10.4 Poistaminen vahingossa
+
+        Jos poistit väärän tuotteen tai varaston, mutta et vielä tallentanut,
+        voit palauttaa aiemman tilan lopettamalla sovelluksen Varasto -valikosta 
+        ja käynnistämällä sovelluksen uudelleen. Muissa tapauksissa
+        tiedot on valitettavasti menetetty.
+
+
+
+11. Tuotteiden tai varastojen sisällön siirtäminen
+
+    'Muokkaa -> Siirrä'.
+    Tuotteita on mahdollista siirtää joko yksittäisesti tai koko varasto kerralla
+    toiseen varastoon. Varastojen yhdistäminen saattaa olla hyvin kätevä ominaisuus,
+    kun kaksi varastoa ovat puolityhjänä. 
+
+    Syötteiden tarkistuksissa käytetään samoja periaatteita, kuin muualla sovelluksen
+    syötekentissä. Tuotenimen kirjainkoolla ei ole merkitystä.
+
+    11.1 Yksittäisen tuotteen siirtäminen
+
+        Yksittäinen tuote voidaan siirtää toiseen varastoon, joko olemassa olevaan
+        tai uuteen. Käyttäjän on annettava siirrettävän tuotteen nimen ja vuosiluvun
+        lisäksi varasto, jossa siirrettävä tuote sijaitsee. Tämä siitä syystä,
+        että samaa tuotetta olisi useassa eri varastossa. Kohdevarastokenttään
+        annetaan sen varaston tunnus, jonne tuote halutaan siirtää. Jos annetulla
+        kohdevaraston tunnuksella ei löydy jo olemassa olevaa varastoa, luodaan 
+        uusi varasto automaattisesti. Jos näppäilet vahingossa väärän tunnuksen,
+        voit korjata tilanteen käyttämällä siirrä toimintoa uudelleen.
+
+    11.2 Varaston sisällön siirtäminen
+
+        Sisältöjä voidaan siirtää myös koko varaston sisältö kerralla toiseen
+        haluttuun varastoon. Myös tässä tapauksessa kohdevarasto voi olla jo 
+        olemassa oleva tai kokonaan uusi. Ohjelma tarkistaa automaattisesti 
+        löytyykö annettua kohdevarastoa listalta ja jos näin ei ole, luodaan uusi.
+
+        Koko varaston sisältö siirretään uuteen sijaintiin. Jos varastot sisältävät 
+        samoja tuotteita, lisätään tuotteen määrää sen sijaan, että uudessa varastossa
+        esiintyisi tuotteita tismalleen samalla nimellä.
+
+        Toiminnan onnistumisesta ilmoitetaan pääikkunan ilmoitusalueella, näytön 
+        alareunassa.
+      
+      
+
+12. Pikanäppäimet
+
+    Sovelluksessa on käytössä muutamia käyttöä helpottavia pikanäppäimiä. Sovelluksen
+    käyttäminen ilman hiirtä on näin melko sujuvaa.
+
+    - Tabulaattorilla eli 'sarkain' -painikkeella voit hypätä syötekenttien 
+      välillä.
+    - 'Enter'-näppäimellä voit korvata 'Lisää', 'Ota' ja 'Hae' nappien painalluksen
+      hiirtä käyttämättä. 'Poista' ja 'Siirrä' -ikkunoissa toiminto ei kuitenkaan ole
+      käytössä
+    - CTRL+T näppäinyhdistelmä tallentaa muutokset riippumatta siitä, mikä ikkuna
+      kulloinkin on avoinna
+    - Nuolinäppäimillä voit selata menubar -valikkoja kaikissa toimintotiloissa. 
+
+
+
+13. Ulkoasu ja teemat
+
+    Sovelluksessa on käytössä automaattisesti vaihtuva teema. Käytännössä sovelluksen
+    taustakuva vaihtuu lähes jokaisella käynnistyskerralla. Käyttäjä ei voi vaikuttaa
+    asetuksista sovelluksen ulkoasuun (). Asetusvalikko ja mm. teeman valinta tulossa 
+    sovelluksen valikoimiin mahdollisesti myöhemmin.
+
+    4.1 Periaate
+
+    Sovelluksen tiedostokansioissa on images niminen kansio, josta on esivalittuna 9
+    eri .jpg muotoista kuvaa, joista sovellus valitsee satunnaisesti kullakin 
+    käynnistyskerralla sovelluksen pääikkunan taustakuvan. Teema ei vaihdu siis 
+    välttämättä joka kerta, mutta se on todennäköisempää.

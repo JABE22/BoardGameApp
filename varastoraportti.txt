@@ -1,0 +1,20 @@
+--- Varastotilanne ---
+_______________________
+
+KE1
+    Punaherukkamehu 2016 / 25.0 l
+    Sekamehu 2016 / 15.0 l
+
+KE2
+    Mustaherukkamehu 2016 / 22.0 l
+
+KE3
+    Luumu 2017 / 15.0 l
+
+LK1
+    Lakkahillo 2017 / 7.3 l
+    Mansikka 2017 / 6.0 l
+    Mustikka 2017 / 35.0 l
+    Mustikka 2016 / 8.3 l
+    Omenasose 2016 / 12.5 l
+    Puolukka 2017 / 40.0 l
