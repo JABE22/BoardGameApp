@@ -25,7 +25,7 @@ public final class MainPage {
     private final Stage ikkuna;
     private final MenuBar menuBar;
     private final BorderPane asettelu;
-    private Menu varastoMenu, muokkaaMenu, haeMenu, timerMenu;
+    private Menu mainMenu, muokkaaMenu, haeMenu, timerMenu, gamedayMenu;
     private final Label toimintoteksti, ohjeteksti;
 
 // Näkymä oliot ja syotteentarkistaja
@@ -97,7 +97,7 @@ public final class MainPage {
 
     public void alustaMenuvalikko() {
     // Building Main Menu
-        varastoMenu = new Menu("Menu");
+        mainMenu = new Menu("Menu");
         MenuItem lopeta = new MenuItem("Lopeta");
         lopeta.setOnAction((ActionEvent event) -> {
             
@@ -115,7 +115,7 @@ public final class MainPage {
             asetaIlmoitusteksti("Muutokset tallennettu!");
         });
         
-        varastoMenu.getItems().addAll(tallenna, raportti, lopeta);
+        mainMenu.getItems().addAll(tallenna, raportti, lopeta);
 
     // Building Game menu
         muokkaaMenu = new Menu("Game");
@@ -180,10 +180,20 @@ public final class MainPage {
             asettelu.setCenter(infoNakyma.getPane());
         });
         haeMenu.getItems().addAll(pelihaku, pelaajaHaku, info);
+        
+    // Building GameDay menu
+        gamedayMenu = new Menu("Gameday");
+        MenuItem newGameday = new MenuItem("Create new");
+        lisaa.setOnAction((ActionEvent event) -> {
+            alustaNakyma("-Create Gameday-", "");
+            asettelu.setCenter(lisaaNakyma.getPane());
+        });
+        gamedayMenu.getItems().addAll(newGameday);
+        
 
     // Adding menus to MenuBar
         menuBar.setId("menubar-style");
-        menuBar.getMenus().addAll(varastoMenu, muokkaaMenu, timerMenu, haeMenu);
+        menuBar.getMenus().addAll(mainMenu, muokkaaMenu, timerMenu, haeMenu, gamedayMenu);
     }
 
     public void asetaIlmoitusteksti(String teksti) {
