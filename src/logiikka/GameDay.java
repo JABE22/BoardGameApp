@@ -57,5 +57,4 @@ public class GameDay {
                 + homePlayer + ", Game Date=" + gameDate + ", Players=" 
                 + players + '}';
     }
-      
 }
