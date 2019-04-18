@@ -59,7 +59,7 @@
                       <Component id="jProgressBar3" min="-2" pref="380" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="70" max="32767" attributes="0"/>
+              <EmptySpace type="separate" pref="70" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="StopWatch2" min="-2" pref="410" max="-2" attributes="0"/>
                   <Component id="StopWatch4" min="-2" pref="410" max="-2" attributes="0"/>
@@ -151,7 +151,7 @@
                       <Component id="RunSW4" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="StopWatch5" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="StopWatch6" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -322,8 +322,14 @@
     </Component>
     <Component class="javax.swing.JButton" name="RunSW3">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="cc" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Play"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RunSW3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="RunSW1">
       <Properties>
@@ -341,8 +347,14 @@
     </Component>
     <Component class="javax.swing.JButton" name="RunSW5">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="cc" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Play"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RunSW5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="StopSW2">
       <Properties>
@@ -357,16 +369,31 @@
     </Component>
     <Component class="javax.swing.JButton" name="StopSW4">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="99" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Stop"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StopSW4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="StopSW6">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="99" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Stop"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StopSW6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="StopSW1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="99" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Stop"/>
       </Properties>
       <Events>
@@ -375,6 +402,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="RunSW2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="cc" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Play"/>
       </Properties>
       <Events>
@@ -383,6 +413,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="StopSW3">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="99" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Stop"/>
       </Properties>
       <Events>
@@ -391,6 +424,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="RunSW4">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="cc" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Play"/>
       </Properties>
       <Events>
@@ -399,6 +435,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="StopSW5">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="99" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Stop"/>
       </Properties>
       <Events>
@@ -407,6 +446,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="RunSW6">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="cc" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Play"/>
       </Properties>
       <Events>

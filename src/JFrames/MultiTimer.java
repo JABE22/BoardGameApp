@@ -108,7 +108,13 @@ public class MultiTimer extends javax.swing.JFrame {
         PlayerTag5.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         PlayerTag5.setText("Player 5");
 
+        RunSW3.setBackground(new java.awt.Color(0, 204, 102));
         RunSW3.setText("Play");
+        RunSW3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RunSW3ActionPerformed(evt);
+            }
+        });
 
         RunSW1.setBackground(new java.awt.Color(0, 204, 102));
         RunSW1.setText("Play");
@@ -119,7 +125,13 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        RunSW5.setBackground(new java.awt.Color(0, 204, 102));
         RunSW5.setText("Play");
+        RunSW5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RunSW5ActionPerformed(evt);
+            }
+        });
 
         StopSW2.setBackground(new java.awt.Color(255, 153, 51));
         StopSW2.setText("Stop");
@@ -129,10 +141,23 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        StopSW4.setBackground(new java.awt.Color(255, 153, 51));
         StopSW4.setText("Stop");
+        StopSW4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StopSW4ActionPerformed(evt);
+            }
+        });
 
+        StopSW6.setBackground(new java.awt.Color(255, 153, 51));
         StopSW6.setText("Stop");
+        StopSW6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StopSW6ActionPerformed(evt);
+            }
+        });
 
+        StopSW1.setBackground(new java.awt.Color(255, 153, 51));
         StopSW1.setText("Stop");
         StopSW1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +165,7 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        RunSW2.setBackground(new java.awt.Color(0, 204, 102));
         RunSW2.setText("Play");
         RunSW2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,6 +173,7 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        StopSW3.setBackground(new java.awt.Color(255, 153, 51));
         StopSW3.setText("Stop");
         StopSW3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,6 +181,7 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        RunSW4.setBackground(new java.awt.Color(0, 204, 102));
         RunSW4.setText("Play");
         RunSW4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +189,7 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        StopSW5.setBackground(new java.awt.Color(255, 153, 51));
         StopSW5.setText("Stop");
         StopSW5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +197,7 @@ public class MultiTimer extends javax.swing.JFrame {
             }
         });
 
+        RunSW6.setBackground(new java.awt.Color(0, 204, 102));
         RunSW6.setText("Play");
         RunSW6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +238,7 @@ public class MultiTimer extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(PlayerTag3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGap(18, 70, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(StopWatch2, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(StopWatch4, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -280,7 +310,7 @@ public class MultiTimer extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(StopSW4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(RunSW4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(StopWatch5)
                     .addComponent(StopWatch6))
@@ -307,35 +337,63 @@ public class MultiTimer extends javax.swing.JFrame {
 
     private void RunSW1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RunSW1ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 1 started");
     }//GEN-LAST:event_RunSW1ActionPerformed
 
     private void StopSW2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopSW2ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 2 stopped");
     }//GEN-LAST:event_StopSW2ActionPerformed
 
     private void StopSW1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopSW1ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 1 stopped");
     }//GEN-LAST:event_StopSW1ActionPerformed
 
     private void RunSW2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RunSW2ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 2 started");
     }//GEN-LAST:event_RunSW2ActionPerformed
 
     private void StopSW3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopSW3ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 3 stopped");
     }//GEN-LAST:event_StopSW3ActionPerformed
 
     private void RunSW4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RunSW4ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 4 started");
     }//GEN-LAST:event_RunSW4ActionPerformed
 
     private void StopSW5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopSW5ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 5 stopped");
     }//GEN-LAST:event_StopSW5ActionPerformed
 
     private void RunSW6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RunSW6ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Timer 6 started");
     }//GEN-LAST:event_RunSW6ActionPerformed
+
+    private void RunSW3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RunSW3ActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Timer 3 started");
+    }//GEN-LAST:event_RunSW3ActionPerformed
+
+    private void StopSW4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopSW4ActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Timer 4 stopped");
+    }//GEN-LAST:event_StopSW4ActionPerformed
+
+    private void RunSW5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RunSW5ActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Timer 5 started");
+    }//GEN-LAST:event_RunSW5ActionPerformed
+
+    private void StopSW6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopSW6ActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Timer 6 stopped");
+    }//GEN-LAST:event_StopSW6ActionPerformed
 
     /**
      * @param args the command line arguments
