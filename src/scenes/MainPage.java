@@ -1,5 +1,6 @@
 package scenes;
 
+import JFrames.MultiTimer;
 import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
@@ -151,10 +152,10 @@ public final class MainPage {
     timerMenu = new Menu("Timer");
     MenuItem setTimer = new MenuItem("Set new timer");
     setTimer.setOnAction((event) -> {
-            asettelu.setCenter(haeNakyma.getPane());
-            asettelu.setBottom(haeNakyma.getLoydetyt());
             asetaToimintoteksti("-Set New Timer-");
-            asetaIlmoitusteksti("");
+            asetaIlmoitusteksti("Starting timer in new window...");
+            MultiTimer multitimer = new MultiTimer();
+            multitimer.setVisible(true);
         });
     timerMenu.getItems().addAll(setTimer);
 
