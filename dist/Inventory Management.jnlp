@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Inventory Management.jnlp">
   <information>
@@ -9,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BoardGameApp.jar" size="786642" download="eager" />
+    <jar href="BoardGameApp.jar" size="786833" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Inventory Management" >
     <param name="requiredFXVersion" value="8.0+"/>
@@ -17,23 +16,3 @@
   <jfx:javafx-desc  width="800" height="600" main-class="scenes.BoardGameAppFXMain"  name="Inventory Management" />
   <update check="always"/>
 </jnlp>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Inventory Management.jnlp">
-  <information>
-    <title>Inventory Management</title>
-    <vendor>JAMA Softwares</vendor>
-    <description>This application is produced by private person. All Rights Reserved. App name: Inventory Management. Date: 23.8.2017, Tampere-Finland</description>
-    <offline-allowed/>
-  </information>
-  <resources>
-    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BoardGameApp.jar" size="783917" download="eager" />
-  </resources>
-  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Inventory Management" >
-    <param name="requiredFXVersion" value="8.0+"/>
-  </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="scenes.BoardGameAppFXMain"  name="Inventory Management" />
-  <update check="always"/>
-</jnlp>
->>>>>>> 0288374379ea7dfb29a79e6a682970cfa7053e5f
